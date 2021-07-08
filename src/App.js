@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+// Component
+// import Todo from './components/Todo'
+import MainNavigation from './components/Layout/MainNavigation';
 
-function App() {
+import AllMeetups from './Pages/AllMeetups';
+import Favorites from './Pages/Favorites';
+import NewMeetup from './Pages/NewMeetup';
+
+import Layout from './components/Layout/Layout';
+
+// Route
+import { Route, Switch } from 'react-router-dom'
+
+function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <h1>My Todos</h1>
+
+      <Todo text="Learn React" />
+      <Todo text="Master Reacr" />
+      <Todo text="Learning by doing is fun!:)" /> */}
+
+      {/* <MainNavigation /> */}
+
+      <Layout>
+
+        <Switch >
+          <Route path='/' exact={true} >
+            <AllMeetups />
+          </Route>
+
+          <Route path='/new-meetup'>
+            <NewMeetup />
+          </Route>
+
+          <Route path='/favorites'>
+            <Favorites />
+          </Route>
+        </Switch>      
+
+      </Layout>
+
+    </>
   );
 }
 
