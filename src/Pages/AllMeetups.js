@@ -67,6 +67,7 @@ function AllMeetups() {
   return (
     <section>
       <h1>All Mettupkjkhlkhjhkjgk</h1>
+      <div>Tambahan</div>
 
       {/* <MeetupList meetups={DUMMY_DATA} /> */}
       <MeetupList meetups={loadedMeetups} />
